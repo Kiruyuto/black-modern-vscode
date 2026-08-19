@@ -13,7 +13,9 @@
       "release-type": "node",
       "exclude-paths": [
         ".github",
-        "token-samples"
+        "token-samples",
+        ".gitignore",
+        ".ignore"
       ]
     }
   },
