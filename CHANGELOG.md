@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.1](https://github.com/Kiruyuto/black-modern-vscode/compare/black-modern-vscode-0.1.0...black-modern-vscode-0.1.1) (2026-08-19)
+
+
+### Chores & Maintenance
+
+* Exclude repository metadata from tooling ([5c2d954](https://github.com/Kiruyuto/black-modern-vscode/commit/5c2d954213bec2197e7d61ec830323f3a15157a3))
+* Refine extension publishing setup ([e51ed20](https://github.com/Kiruyuto/black-modern-vscode/commit/e51ed20370edee2c596cb51c9ea61bc1120ed07a))
+* Sync VS Code theme defaults ([#8](https://github.com/Kiruyuto/black-modern-vscode/issues/8)) ([f2b9779](https://github.com/Kiruyuto/black-modern-vscode/commit/f2b9779d62d8dc2c70935c946455cf42e68b1d7f))
+* Update Marketplace extension identity ([b24c3f2](https://github.com/Kiruyuto/black-modern-vscode/commit/b24c3f2558266c8be52094b953000e2c6d049374))
+
 ## [0.1.0](https://github.com/Kiruyuto/black-modern-vscode/compare/black-modern-vscode-0.0.1...black-modern-vscode-0.1.0) (2026-08-19)
 
 
