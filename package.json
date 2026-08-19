@@ -1,6 +1,6 @@
 {
-  "name": "black-modern",
-  "displayName": "Black Modern",
+  "name": "black-modern-vscode",
+  "displayName": "Black Modern Monochrome",
   "description": "A monochrome, near-black VS Code theme inspired by Obsidian's Void, paired with Dark Modern syntax colors.",
   "publisher": "Kiruyuto",
   "version": "0.1.0",
@@ -26,7 +26,11 @@
     "black theme",
     "obsidian",
     "dark modern",
-    "void"
+    "void",
+    "monochrome",
+    "gray",
+    "grayscale",
+    "black-and-white"
   ],
   "galleryBanner": {
     "color": "#0b0b0b",

@@ -12,8 +12,8 @@ Syntax/token highlighting comes from VS Code's [Dark+ theme](./themes/upstream/v
 
 ## Installation
 
-- Install from the VS Code Marketplace: [Black Modern](https://marketplace.visualstudio.com/items?itemName=Kiruyuto.black-modern)
-- Install using the CLI: `code --install-extension Kiruyuto.black-modern`
+- Install from the VS Code Marketplace: [Black Modern Monochrome](https://marketplace.visualstudio.com/items?itemName=Kiruyuto.black-modern-vscode)
+- Install using the CLI: `code --install-extension Kiruyuto.black-modern-vscode`
 - Build from source: With [`@vscode/vsce`](https://github.com/microsoft/vscode-vsce) installed, clone this repository and run `vsce package` to generate a `.vsix` file then install it from the Extensions view. See the [official packaging guide](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#packaging-extensions) for more details.
 
 ## Acknowledgments
