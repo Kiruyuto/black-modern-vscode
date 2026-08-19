@@ -1,0 +1,21 @@
+{
+  "name": "black-modern",
+  "displayName": "black-modern",
+  "description": "Theme based on Obsidian's Void and VSCode vantablack, with DarkModen syntax highlightning",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.125.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Black Modern",
+        "uiTheme": "vs-dark",
+        "path": "./themes/black-modern-color-theme.json"
+      }
+    ]
+  }
+}
