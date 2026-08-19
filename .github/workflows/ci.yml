@@ -1,0 +1,71 @@
+name: "CI"
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+  workflow_dispatch:
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    name: "Package Extension"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 10
+
+    steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: "Set up Node.js"
+        uses: actions/setup-node@v7.0.0
+        with:
+          node-version-file: package.json
+          package-manager-cache: false
+
+      - name: "Package extension"
+        run: npx --yes @vscode/vsce package --no-dependencies --out black-modern.vsix
+
+      - name: "Verify packaged contents"
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          $archive = [System.IO.Compression.ZipFile]::OpenRead(
+            (Resolve-Path -LiteralPath "black-modern.vsix")
+          )
+
+          try {
+            $entries = @($archive.Entries.FullName)
+            $requiredEntries = @(
+              "extension/package.json",
+              "extension/themes/black-modern-color-theme.json",
+              "extension/themes/upstream/vscode/dark_plus.json",
+              "extension/themes/upstream/vscode/dark_vs.json"
+            )
+
+            foreach ($entry in $requiredEntries) {
+              if ($entry -cnotin $entries) {
+                throw "Required file is missing from the VSIX: $entry"
+              }
+            }
+          }
+          finally {
+            $archive.Dispose()
+          }
+
+      - name: "Upload packaged extension"
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: black-modern-vsix
+          path: black-modern.vsix
+          if-no-files-found: error
+          retention-days: 7

@@ -1,0 +1,73 @@
+name: "Release"
+
+on:
+  push:
+    branches: ["master"]
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: false
+
+permissions: {}
+
+jobs:
+  release-please:
+    name: "Release-Please"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    outputs:
+      release_created: ${{ steps.run-release-please.outputs.release_created }}
+      tag_name: ${{ steps.run-release-please.outputs.tag_name }}
+      version: ${{ steps.run-release-please.outputs.version }}
+
+    steps:
+      - name: "Generate App Token"
+        uses: actions/create-github-app-token@v3.2.0
+        id: generate-token
+        with:
+          client-id: ${{ secrets.BOT_ClientId }}
+          private-key: ${{ secrets.BOT_PrivateKey }}
+          permission-contents: write
+          permission-issues: write
+          permission-pull-requests: write
+
+      - name: "Run release-please"
+        uses: googleapis/release-please-action@v5.0.0
+        id: run-release-please
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+          config-file: .github/release-please-config.json
+          manifest-file: .github/.release-please-manifest.json
+
+      - name: "Echo release-please outputs"
+        run: echo "$OUTPUTS"
+        shell: bash
+        env:
+          OUTPUTS: ${{ toJSON(steps.run-release-please.outputs) }}
+
+  release-theme-to-marketplace:
+    if: ${{ needs.release-please.outputs.release_created == 'true' }}
+    needs: ["release-please"]
+    name: "Release Theme To VS Code Marketplace"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@v7.0.0
+        with:
+          persist-credentials: false
+
+      - name: "Set up Node.js"
+        uses: actions/setup-node@v7.0.0
+        with:
+          node-version-file: package.json
+          package-manager-cache: false
+
+      - name: "Publish theme to VS Code Marketplace"
+        run: npx --yes @vscode/vsce publish --oidc --no-dependencies
