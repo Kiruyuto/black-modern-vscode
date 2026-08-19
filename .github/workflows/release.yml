@@ -24,7 +24,7 @@ jobs:
 
     steps:
       - name: "Generate App Token"
-        uses: actions/create-github-app-token@v3.2.0
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
         id: generate-token
         with:
           client-id: ${{ secrets.BOT_ClientId }}
@@ -34,7 +34,7 @@ jobs:
           permission-pull-requests: write
 
       - name: "Run release-please"
-        uses: googleapis/release-please-action@v5.0.0
+        uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0
         id: run-release-please
         with:
           token: ${{ steps.generate-token.outputs.token }}
@@ -60,13 +60,13 @@ jobs:
 
     steps:
       - name: "Checkout repository"
-        uses: actions/checkout@v7.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ needs.release-please.outputs.tag_name }}
           persist-credentials: false
 
       - name: "Set up Node.js"
-        uses: actions/setup-node@v7.0.0
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: package.json
           package-manager-cache: false
