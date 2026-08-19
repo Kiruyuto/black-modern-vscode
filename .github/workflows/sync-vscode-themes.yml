@@ -2,7 +2,7 @@ name: "Sync VS Code theme defaults"
 
 on:
   schedule:
-    - cron: "0 6 * * 5"
+    - cron: "0 6 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -80,4 +80,4 @@ jobs:
           body: |
             Synchronizes the vendored default themes from Microsoft VS Code.
 
-            Upstream commit: `${{ steps.sync.outputs.sha }}`
+            Upstream revision: [`${{ steps.sync.outputs.sha }}`](https://github.com/microsoft/vscode/commit/${{ steps.sync.outputs.sha }})
