@@ -3,7 +3,7 @@
   "displayName": "Black Modern",
   "description": "A monochrome, near-black VS Code theme inspired by Obsidian's Void, paired with Dark Modern syntax colors.",
   "publisher": "Kiruyuto",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "SEE LICENSE IN LICENSE",
   "repository": {
     "type": "git",
