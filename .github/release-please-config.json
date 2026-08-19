@@ -1,0 +1,70 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "group-pull-request-title-pattern": "chore: Release v${version}",
+  "separate-pull-requests": false,
+  "prerelease": false,
+  "draft-pull-request": true,
+  "pull-request-header": "Changelog",
+  "include-v-in-tag": false,
+  "packages": {
+    ".": {
+      "component": "black-modern-vscode",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "exclude-paths": [
+        ".github",
+        "token-samples"
+      ]
+    }
+  },
+  "plugins": [
+    "sentence-case"
+  ],
+  "changelog-sections": [
+    {
+      "type": "feat",
+      "section": "Features",
+      "hidden": false
+    },
+    {
+      "type": "fix",
+      "section": "Bug Fixes",
+      "hidden": false
+    },
+    {
+      "type": "ci",
+      "section": "CI/CD",
+      "hidden": false
+    },
+    {
+      "type": "chore",
+      "section": "Chores & Maintenance",
+      "hidden": false
+    },
+    {
+      "type": "docs",
+      "section": "Documentation",
+      "hidden": false
+    },
+    {
+      "type": "test",
+      "section": "Tests",
+      "hidden": false
+    },
+    {
+      "type": "style",
+      "section": "Style",
+      "hidden": false
+    },
+    {
+      "type": "refactor",
+      "section": "Refactors",
+      "hidden": false
+    },
+    {
+      "type": "perf",
+      "section": "Performance",
+      "hidden": false
+    }
+  ]
+}

@@ -1,14 +1,37 @@
 {
   "name": "black-modern",
-  "displayName": "black-modern",
-  "description": "Theme based on Obsidian's Void and VSCode vantablack, with DarkModen syntax highlightning",
+  "displayName": "Black Modern",
+  "description": "A monochrome black theme based on Obsidian's Void, with Dark Modern syntax highlighting.",
+  "publisher": "Kiruyuto",
   "version": "0.0.1",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kiruyuto/black-modern-vscode"
+  },
+  "homepage": "https://github.com/Kiruyuto/black-modern-vscode#readme",
+  "bugs": {
+    "url": "https://github.com/Kiruyuto/black-modern-vscode/issues"
+  },
   "engines": {
-    "vscode": "^1.125.0"
+    "vscode": "^1.125.0",
+    "node": "24.x"
   },
   "categories": [
     "Themes"
   ],
+  "keywords": [
+    "theme",
+    "dark theme",
+    "black theme",
+    "obsidian",
+    "dark modern",
+    "void"
+  ],
+  "galleryBanner": {
+    "color": "#0b0b0b",
+    "theme": "dark"
+  },
   "contributes": {
     "themes": [
       {
