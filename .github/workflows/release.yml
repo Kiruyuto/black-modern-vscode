@@ -73,7 +73,7 @@ jobs:
 
       - name: "Publish theme to VS Code Marketplace"
         # Switch to this command when VS Marketplace OIDC trusted publishing is available:
-        # run: npx --yes @vscode/vsce publish --oidc --no-dependencies
-        run: npx --yes @vscode/vsce publish --no-dependencies
+        # run: npx --yes @vscode/vsce publish --oidc --githubBranch master --no-dependencies
+        run: npx --yes @vscode/vsce publish --githubBranch master --no-dependencies
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}

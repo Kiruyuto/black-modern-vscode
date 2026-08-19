@@ -2,4 +2,5 @@
 .vscode/**
 scripts/**
 token-samples/**
+assets/**
 .gitignore

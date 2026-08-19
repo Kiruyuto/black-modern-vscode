@@ -6,7 +6,7 @@
 
 ## Color palette
 
-The exact UI palette is defined in the [`"palette"` object](./themes/black-modern-color-theme.json). It is based on [Void for Obsidian](https://community.obsidian.md/themes/void) by [@0Crazy-0](https://github.com/0Crazy-0).
+The exact UI palette is defined in the [`"palette"`](./themes/black-modern-color-theme.json) object. It is based on [Void for Obsidian](https://community.obsidian.md/themes/void) by [@0Crazy-0](https://github.com/0Crazy-0).
 
 Syntax/token highlighting comes from VS Code's [Dark+ theme](./themes/upstream/vscode/dark_plus.json), which also serves as the base for Dark Modern.
 

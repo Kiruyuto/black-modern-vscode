@@ -5,7 +5,6 @@ on:
     branches: ["master"]
   pull_request:
     branches: ["master"]
-  workflow_dispatch:
 
 concurrency:
   group: "${{ github.workflow }}-${{ github.ref }}"
@@ -33,14 +32,14 @@ jobs:
           package-manager-cache: false
 
       - name: "Package extension"
-        run: npx --yes @vscode/vsce package --no-dependencies --out black-modern.vsix
+        run: npx --yes @vscode/vsce package --githubBranch master --no-dependencies --out black-modern-vscode.vsix
 
       - name: "Verify packaged contents"
         shell: pwsh
         run: |
           $ErrorActionPreference = "Stop"
           $archive = [System.IO.Compression.ZipFile]::OpenRead(
-            (Resolve-Path -LiteralPath "black-modern.vsix")
+            (Resolve-Path -LiteralPath "black-modern-vscode.vsix")
           )
 
           try {
@@ -65,7 +64,7 @@ jobs:
       - name: "Upload packaged extension"
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: black-modern-vsix
-          path: black-modern.vsix
+          name: black-modern-vscode-vsix
+          path: black-modern-vscode.vsix
           if-no-files-found: error
           retention-days: 4
