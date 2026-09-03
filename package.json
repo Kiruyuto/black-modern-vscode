@@ -14,7 +14,7 @@
     "url": "https://github.com/Kiruyuto/black-modern-vscode/issues"
   },
   "engines": {
-    "vscode": "^1.125.0",
+    "vscode": "^1.136.1",
     "node": "24.x"
   },
   "categories": [
