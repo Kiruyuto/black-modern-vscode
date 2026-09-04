@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.1.3](https://github.com/Kiruyuto/black-modern-vscode/compare/black-modern-vscode-0.1.2...black-modern-vscode-0.1.3) (2026-09-04)
+
+
+### Bug Fixes
+
+* Restore VS Code compatibility baseline ([01beb52](https://github.com/Kiruyuto/black-modern-vscode/commit/01beb5299170f70e1580d61da2d1d92ce2231ec1))
+
+
+### Build System
+
+* Exclude ignore config from extension package ([28a9956](https://github.com/Kiruyuto/black-modern-vscode/commit/28a9956122638eeacc321b5ad882700a7dde754a))
+
+
+### Chores & Maintenance
+
+* Sync VS Code theme defaults ([#13](https://github.com/Kiruyuto/black-modern-vscode/issues/13)) ([b850a9d](https://github.com/Kiruyuto/black-modern-vscode/commit/b850a9d78cc758d3904820d773be5b3537109580))
+
 ## [0.1.2](https://github.com/Kiruyuto/black-modern-vscode/compare/black-modern-vscode-0.1.1...black-modern-vscode-0.1.2) (2026-08-20)
 
 
