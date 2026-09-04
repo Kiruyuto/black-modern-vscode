@@ -1,6 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "github>kiruyuto/renovate-config"
+  "extends": ["github>kiruyuto/renovate-config"],
+  "packageRules": [
+    {
+      "description": "Keep extension compatibility baselines manually managed",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["engines"],
+      "enabled": false
+    }
   ]
 }
