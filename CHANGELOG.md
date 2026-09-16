@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/Kiruyuto/black-modern-vscode/compare/black-modern-vscode-0.1.3...black-modern-vscode-0.1.4) (2026-09-16)
+
+
+### Chores & Maintenance
+
+* Sync VS Code theme defaults ([#16](https://github.com/Kiruyuto/black-modern-vscode/issues/16)) ([d843475](https://github.com/Kiruyuto/black-modern-vscode/commit/d8434759dcc63e56f000ce670a149eabb5e7ce9d))
+
 ## [0.1.3](https://github.com/Kiruyuto/black-modern-vscode/compare/black-modern-vscode-0.1.2...black-modern-vscode-0.1.3) (2026-09-04)
 
 
