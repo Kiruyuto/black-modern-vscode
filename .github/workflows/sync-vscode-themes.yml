@@ -65,6 +65,7 @@ jobs:
           permission-pull-requests: write
 
       - name: "Create synchronization pull request"
+        id: create-pull-request
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
           token: ${{ steps.generate-token.outputs.token }}
@@ -81,3 +82,10 @@ jobs:
             Synchronizes the vendored default themes from Microsoft VS Code.
 
             Upstream revision: [`${{ steps.sync.outputs.sha }}`](https://github.com/microsoft/vscode/commit/${{ steps.sync.outputs.sha }})
+
+      - name: "Enable pull request auto-merge"
+        if: ${{ steps.create-pull-request.outputs.pull-request-operation == 'created' }}
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh pr merge "${{ steps.create-pull-request.outputs.pull-request-number }}" --auto --squash
