@@ -404,6 +404,7 @@
     // "sideBarStickyScroll.border": null,
     // Status Bar
     "statusBar.background": "#0b0b0b",
+    "statusBar.inactiveBackground": "#0b0b0b",
     "statusBar.debuggingBackground": "#e6e6e6",
     "statusBar.foreground": "#e6e6e6",
     "statusBar.debuggingForeground": "#0b0b0b",
