@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5](https://github.com/Kiruyuto/black-modern-vscode/compare/black-modern-vscode-0.1.4...black-modern-vscode-0.1.5) (2026-09-19)
+
+
+### Bug Fixes
+
+* Align inactive status bar background with theme ([#18](https://github.com/Kiruyuto/black-modern-vscode/issues/18)) ([b3a9e3f](https://github.com/Kiruyuto/black-modern-vscode/commit/b3a9e3f242d8084642083cce316fd71a16c1321c))
+
 ## [0.1.4](https://github.com/Kiruyuto/black-modern-vscode/compare/black-modern-vscode-0.1.3...black-modern-vscode-0.1.4) (2026-09-16)
 
 
