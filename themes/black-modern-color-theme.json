@@ -140,6 +140,7 @@
     // "editorGroup.emptyBackground": null,
     // "editorGroup.focusedEmptyBorder": null,
     // Editor => Group Header
+    "editorGroupHeader.connectedTabsBackground": "#0b0b0b",
     "editorGroupHeader.noTabsBackground": "#0b0b0b",
     "editorGroupHeader.tabsBackground": "#0b0b0b",
     "editorGroupHeader.tabsBorder": "#202020",
