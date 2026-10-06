@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.8](https://github.com/Kiruyuto/black-modern-vscode/compare/black-modern-vscode-0.1.7...black-modern-vscode-0.1.8) (2026-10-06)
+
+
+### Bug Fixes
+
+* Restore black tab bar background ([#24](https://github.com/Kiruyuto/black-modern-vscode/issues/24)) ([6f22223](https://github.com/Kiruyuto/black-modern-vscode/commit/6f222239fd0b34866c8afe82c2ba5357a5a536b0))
+
 ## [0.1.7](https://github.com/Kiruyuto/black-modern-vscode/compare/black-modern-vscode-0.1.6...black-modern-vscode-0.1.7) (2026-10-05)
 
 
